@@ -6,7 +6,7 @@
     <title>政策中心 - Sytronic Hub</title>
     <link rel="Shortcut Icon" href="https://static.sytronichub.com/images/favicon.ico" />
     <link rel="Bookmark" href="https://static.sytronichub.com/images/favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
     <meta name="description" content="我们注重您的体验，在这里查阅我们的相关政策。Sytronic Hub，让兴趣与众不同。在这里，分享你的视频和日常。">
     <meta name="keywords" content="隐私政策, 用户服务协议, 隐私, 条款, 政策中心, 政策, Sytronic Hub, 视频, ACG, 动画, 游戏, 音乐, 科技">
@@ -131,14 +131,16 @@
             flex: 1;
             display: flex;
             align-items: center;         /* 垂直居中 */
-            justify-content: flex-start; /* 水平靠左 */
+            justify-content: center; /* 内容块水平居中（文字仍左对齐） */
             padding: 40px 24px 60px;
         }
 
         .main-inner {
             max-width: 720px;
             width: 100%;
-            text-align: left;            /* 所有文本左对齐 */
+            text-align: left;
+            margin: 0 auto;
+            /* 所有文本左对齐 */
         }
 
         /* 图标装饰 */
@@ -196,7 +198,7 @@
         .link-group {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start; /* 靠左排列 */
+            justify-content: flex-start; /* 按钮靠左排列（只居中内容块） */
             gap: 16px;
         }
         .link-group a {
@@ -281,6 +283,103 @@
                 gap: 12px;
             }
         }
+
+        /* ---------- 深色模式 ---------- */
+        :root { color-scheme: light dark; }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #66BB6A;
+                --on-primary: #08210B;
+                --primary-container: #1E3B22;
+                --on-primary-container: #C8E6C9;
+                --secondary: #64B5F6;
+                --on-secondary: #04203A;
+                --secondary-container: #12324D;
+                --on-secondary-container: #BBDEFB;
+                --surface: #0F1210;
+                --surface-dim: #0A0C0A;
+                --surface-cl: #171B18;
+                --surface-clo: #141815;
+                --surface-c: #1B201C;
+                --surface-ch: #242A25;
+                --surface-chh: #2C332D;
+                --on-surface: #E6EBE6;
+                --on-sv: #A9B3AA;
+                --outline: #8B948B;
+                --outline-v: #39423A;
+            }
+            .btn-link:hover { background: #81C784; }
+            .btn-link.secondary:hover { background: #42A5F5; }
+            .back-link-group a:hover { color: #81C784; }
+        }
+
+        /* ---------- 导航右侧链接 ---------- */
+        .nav-links {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .nav-links a {
+            color: var(--on-sv);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: color .2s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* ---------- 修订历史 ---------- */
+        .revision-history {
+            margin-top: 36px;
+            padding-top: 22px;
+            border-top: 2px solid var(--surface-ch);
+        }
+        .revision-history h2 {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--on-surface);
+            margin-bottom: 6px;
+        }
+        .revision-intro {
+            font-size: 13px;
+            color: var(--outline);
+            margin-bottom: 14px;
+        }
+        .revision-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        .revision-table th,
+        .revision-table td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--surface-ch);
+            vertical-align: top;
+        }
+        .revision-table th {
+            color: var(--outline);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .04em;
+            white-space: nowrap;
+        }
+        .revision-table td { color: var(--on-sv); line-height: 1.6; }
+        .revision-table td:first-child {
+            color: var(--on-surface);
+            font-weight: 800;
+            white-space: nowrap;
+        }
+        .revision-table tr:last-child td { border-bottom: none; }
+        .revision-more { margin-top: 14px; font-size: 13px; }
+        .revision-more a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .revision-more a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -292,6 +391,7 @@
                 <img src="https://static.sytronichub.com/images/solar-logo.png" alt="Sytronic Hub Logo" />
                 <span>政策中心</span>
             </a>
+            <div class="nav-links"><a href="/revisions">修订历史</a></div>
         </div>
     </nav>
 
@@ -317,6 +417,7 @@
                 <a href="/privacy">隐私政策</a>
                 <a href="/terms">用户服务协议</a>
                 <a href="/community-guideline">社区公约</a>
+                <a href="/revisions">修订历史</a>
             </div>
 
             <!-- 辅助联系提示 -->
@@ -324,6 +425,32 @@
                 <span class="material-icons-round">info</span>
                 如有任何隐私相关问题，请通过 <a href="mailto:help@sytronichub.com">help@sytronichub.com</a> 联系我们
             </p>
+
+            <!-- 最近修订 -->
+            <section class="revision-history" id="revisions">
+                <h2>最近修订</h2>
+                <p class="revision-intro">各政策的历次修订都记录在这里，便于随时回溯。</p>
+                <table class="revision-table">
+                    <thead>
+                        <tr><th>日期</th><th>文档</th><th>版本</th><th>说明</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2026年10月30日</td>
+                            <td>隐私政策 / 用户服务协议 / 社区公约</td>
+                            <td>v1.1</td>
+                            <td>页面适配深色模式、内容居中排版，并新增修订历史；条款内容未变更。</td>
+                        </tr>
+                        <tr>
+                            <td>2026年8月6日</td>
+                            <td>隐私政策 / 用户服务协议 / 社区公约</td>
+                            <td>v1.0</td>
+                            <td>政策中心上线，三份文档首次发布。</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="revision-more"><a href="/revisions">查看完整修订历史 →</a></p>
+            </section>
         </div>
     </main>
 
