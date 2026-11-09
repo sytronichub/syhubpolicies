@@ -206,6 +206,22 @@
             text-decoration: none;
             font-weight: 700;
         }
+        .policy-links {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .policy-links a {
+            display: inline-flex;
+            flex-direction: column;
+            gap: 2px;
+            font-size: 16px;
+        }
+        .policy-updated {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--outline);
+        }
         .btn-link {
             display: inline-flex;
             align-items: center;
@@ -391,7 +407,6 @@
                 <img src="https://static.sytronichub.com/images/solar-logo.png" alt="Sytronic Hub Logo" />
                 <span>政策中心</span>
             </a>
-            <div class="nav-links"><a href="/revisions">修订历史</a></div>
         </div>
     </nav>
 
@@ -413,11 +428,10 @@
             </p>
 
             <!-- 引导链接 -->
-            <div class="link-group">
-                <a href="/privacy">隐私政策</a>
-                <a href="/terms">用户服务协议</a>
-                <a href="/community-guideline">社区公约</a>
-                <a href="/revisions">修订历史</a>
+            <div class="link-group policy-links">
+                <a href="/privacy">隐私政策<span class="policy-updated">最后更新 2026-10-30</span></a>
+                <a href="/terms">用户服务协议<span class="policy-updated">最后更新 2026-11-10</span></a>
+                <a href="/community-guideline">社区公约<span class="policy-updated">最后更新 2026-11-10</span></a>
             </div>
 
             <!-- 辅助联系提示 -->
@@ -426,37 +440,6 @@
                 如有任何隐私相关问题，请通过 <a href="mailto:help@sytronichub.com">help@sytronichub.com</a> 联系我们
             </p>
 
-            <!-- 最近修订 -->
-            <section class="revision-history" id="revisions">
-                <h2>最近修订</h2>
-                <p class="revision-intro">各政策的历次修订都记录在这里，便于随时回溯。</p>
-                <table class="revision-table">
-                    <thead>
-                        <tr><th>日期</th><th>文档</th><th>版本</th><th>说明</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2026年11月4日</td>
-                            <td>用户服务协议 / 社区公约</td>
-                            <td>v1.2</td>
-                            <td>补充账号归属、违规处理及封禁状态注销的绑定信息规则；新增政治内容、限制级标识、引战刷屏、广告、恶意举报、搬运与版权限制条款。</td>
-                        </tr>
-                        <tr>
-                            <td>2026年10月30日</td>
-                            <td>隐私政策 / 用户服务协议 / 社区公约</td>
-                            <td>v1.1</td>
-                            <td>页面适配深色模式、内容居中排版，并新增修订历史；条款内容未变更。</td>
-                        </tr>
-                        <tr>
-                            <td>2026年8月6日</td>
-                            <td>隐私政策 / 用户服务协议 / 社区公约</td>
-                            <td>v1.0</td>
-                            <td>政策中心上线，三份文档首次发布。</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p class="revision-more"><a href="/revisions">查看完整修订历史 →</a></p>
-            </section>
         </div>
     </main>
 

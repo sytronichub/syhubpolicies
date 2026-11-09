@@ -330,6 +330,52 @@
             font-weight: 700;
         }
         .revision-more a:hover { text-decoration: underline; }
+
+        /* ---------- 版本切换（只在政策详情页；主页不显示修订记录） ---------- */
+        .policy-version-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin: -12px 0 24px;
+            padding: 12px 14px;
+            background: var(--surface-clo);
+            border: 1px solid var(--surface-ch);
+            border-radius: 12px;
+        }
+        .policy-version-bar label {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--on-sv);
+        }
+        .version-select {
+            appearance: none;
+            border: 1px solid var(--outline-v);
+            border-radius: 9px;
+            background: var(--surface-cl);
+            color: var(--on-surface);
+            font: 700 13px 'Nunito', sans-serif;
+            padding: 8px 34px 8px 12px;
+            cursor: pointer;
+            background-image: linear-gradient(45deg, transparent 50%, var(--outline) 50%), linear-gradient(135deg, var(--outline) 50%, transparent 50%);
+            background-position: calc(100% - 16px) 50%, calc(100% - 11px) 50%;
+            background-size: 5px 5px, 5px 5px;
+            background-repeat: no-repeat;
+        }
+        .version-select:focus { outline: 2px solid var(--primary-container); outline-offset: 1px; }
+        .policy-history-note {
+            display: block;
+            margin: -8px 0 22px;
+            padding: 10px 14px;
+            border-left: 3px solid var(--primary);
+            background: var(--primary-container);
+            color: var(--on-primary-container);
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 0 10px 10px 0;
+        }
+        .policy-history-note a { color: var(--on-primary-container); text-decoration: underline; }
+        .policy-version[hidden] { display: none !important; }
     </style>
 </head>
 <body>
@@ -340,16 +386,92 @@
                 <img src="https://static.sytronichub.com/images/solar-logo.png" alt="Sytronic Hub Logo" />
                 <span>政策中心</span>
             </a>
-            <div class="nav-links"><a href="/revisions">修订历史</a></div>
         </div>
     </nav>
 
     <main class="main-wrap">
         <div class="main-inner">
             <h1 class="page-title">社区公约</h1>
-            <div class="last-updated">版本 v1.2 · 最后修改日期：2026年11月4日</div>
+            <div class="last-updated" id="policyUpdated">最后更新：2026年11月10日</div>
+            <div class="policy-version-bar">
+                <label for="policyVersion">历史版本</label>
+                <select class="version-select" id="policyVersion" aria-label="选择历史版本">
+                    
+                    <option value="2026-11-10" selected>2026年11月10日（当前）</option>
+                    <option value="2026-11-04">2026年11月4日</option>
+                    <option value="2026-10-30">2026年10月30日</option>
+                    <option value="2026-08-06">2026年8月6日</option>
+                </select>
+            </div>
+            <div class="policy-history-note" id="policyHistoryNote" hidden>
+                你正在查看历史版本 <span id="policyHistoryVersion">2026年11月10日</span>，内容为当时生效的原文。<a href="?">返回最新版本</a>
+            </div>
 
-            <div class="policy-content">
+                        <div class="policy-content policy-version" data-date="2026-11-10" data-updated="2026年11月10日">
+                <p>欢迎来到 Sytronic Hub 社区。我们致力于为每一位用户提供开放、包容、友善的交流环境。请您仔细阅读并遵守本社区公约，共同维护社区的和谐与健康。</p>
+
+                <h2>一、基本准则</h2>
+                <ul>
+                    <li>尊重他人：保持礼貌和同理心，禁止人身攻击、侮辱、歧视或骚扰其他用户。</li>
+                    <li>文明发言：不使用粗俗、仇恨或威胁性语言。</li>
+                    <li>内容合法：禁止发布任何违反中华人民共和国法律法规的内容。</li>
+                </ul>
+
+                <h2>二、内容规范</h2>
+                <h3>2.1 政治相关内容</h3>
+                <p>本平台禁止发布任何政治相关内容，无论其形式、立场或表达方式。包括但不限于涉及政治立场、政治人物、政治事件、政策争议、意识形态争论的文字、图片、音频、视频、评论、动态及其他任何内容。此类内容一经发现，平台将立即删除，并视情节对账号采取限制或封禁措施。</p>
+
+                <h3>2.2 限制级内容标识</h3>
+                <p>限制级内容必须在发布时主动添加“限制级内容”标识。未添加标识的稿件一律视为违规稿件，平台将视情况退回、删除或限制展示；由此产生的后果由发布者承担。</p>
+
+                <h3>2.3 其他禁止内容</h3>
+                <ul>
+                    <li>色情、裸露、性暗示或低俗内容。</li>
+                    <li>暴力、血腥、恐怖主义或煽动暴力。</li>
+                    <li>虚假信息、谣言或误导性内容。</li>
+                    <li>侵犯他人版权、商标权或隐私权的内容。</li>
+                    <li>任何形式的赌博、毒品或违法交易信息。</li>
+                </ul>
+
+                <h3>2.4 邪教与传教</h3>
+                <p>邪教、传教等内容一律禁止。禁止宣扬、传播邪教、迷信组织，或进行任何形式的传教、招募、拉拢活动。</p>
+
+                <h2>三、互动、推广与举报</h2>
+                <h3>3.1 引战与刷屏</h3>
+                <p>禁止引战、挑衅、煽动对立、刷屏、刷评论、刷弹幕等破坏社区秩序的行为。举报属实的，平台将对相关内容予以退回、删除等处理；情节严重的，对相应账号采取封禁等措施。</p>
+
+                <h3>3.2 在他人稿件下打广告</h3>
+                <p>禁止在他人稿件下发布广告，尤其是黑灰产、诈骗、赌博、色情、引流等违法或高风险广告。一经发现，平台将删除对应内容并封禁对应账号。</p>
+
+                <h3>3.3 恶意举报</h3>
+                <p>禁止恶意举报、诬告或滥用举报功能。经核实属于恶意举报的，平台将封禁举报者账号。</p>
+
+                <h2>四、搬运与版权</h2>
+                <h3>4.1 搬运稿件</h3>
+                <p>未经授权搬运他人稿件，经核实情况属实的，平台将退回对应稿件；情节严重的，封禁搬运者账号。若原创作者提出申请并提供必要证明，平台可将对应稿件归入其账号。</p>
+
+                <h3>4.2 版权限制内容</h3>
+                <p>若稿件受版权限制，平台将根据权利人要求或风险判断，对稿件作出地区限制等功能；必要时限制展示或下架。</p>
+
+                <h2>五、举报与处理</h2>
+                <p>如果您发现违反公约的内容或行为，请使用平台举报功能或发送邮件至 <a href="mailto:help@sytronichub.com">help@sytronichub.com</a> 进行举报。我们将在合理时间内核查并采取相应措施，包括但不限于删除内容、警告、限制功能、封禁账号等。</p>
+
+                <h2>六、违规处理措施</h2>
+                <p>对于违反公约的用户，我们视情节轻重采取以下处理：</p>
+                <ul>
+                    <li>轻度违规：删除违规内容并发送警告。</li>
+                    <li>中度违规：限制部分功能（如评论、发布）一段时间。</li>
+                    <li>严重违规：永久封禁账号，并保留追究法律责任的权利。</li>
+                </ul>
+
+                <h2>七、公约更新</h2>
+                <p>我们保留适时修订本公约的权利。更新版本将在平台公布，修改生效后继续使用服务即视为接受新公约。</p>
+
+                <h2>八、联系我们</h2>
+                <p>如有任何疑问或建议，请通过 <a href="mailto:help@sytronichub.com">help@sytronichub.com</a> 与我们联系。</p>
+            </div>
+
+            <div class="policy-content policy-version" data-date="2026-11-04" data-updated="2026年11月4日" hidden>
                 <p>欢迎来到 Sytronic Hub 社区。我们致力于为每一位用户提供开放、包容、友善的交流环境。请您仔细阅读并遵守本社区公约，共同维护社区的和谐与健康。</p>
 
                 <h2>一、基本准则</h2>
@@ -410,11 +532,143 @@
                 <p>如有任何疑问或建议，请通过 <a href="mailto:help@sytronichub.com">help@sytronichub.com</a> 与我们联系。</p>
             </div>
 
+            <div class="policy-content policy-version" data-date="2026-10-30" data-updated="2026年10月30日" hidden>
+                <p>欢迎来到 Sytronic Hub 社区。我们致力于为每一位用户提供开放、包容、友善的交流环境。请您仔细阅读并遵守本社区公约，共同维护社区的和谐与健康。</p>
+
+                <h2>一、基本准则</h2>
+                <ul>
+                    <li>尊重他人：保持礼貌和同理心，禁止人身攻击、侮辱、歧视或骚扰其他用户。</li>
+                    <li>文明发言：不使用粗俗、仇恨或威胁性语言。</li>
+                    <li>内容合法：禁止发布任何违反中华人民共和国法律法规的内容。</li>
+                </ul>
+
+                <h2>二、内容规范</h2>
+                <h3>2.1 允许的内容</h3>
+                <p>您可以分享与 ACG（动画、漫画、游戏）、音乐、科技、生活等主题相关的原创或合法转载内容。鼓励高质量、有见解的讨论。</p>
+                <h3>2.2 禁止的内容</h3>
+                <ul>
+                    <li>色情、裸露、性暗示或低俗内容。</li>
+                    <li>暴力、血腥、恐怖主义或煽动暴力。</li>
+                    <li>虚假信息、谣言或误导性内容。</li>
+                    <li>侵犯他人版权、商标权或隐私权的内容。</li>
+                    <li>广告、垃圾信息或恶意刷屏。</li>
+                    <li>任何形式的赌博、毒品或违法交易信息。</li>
+                </ul>
+
+                <h2>三、互动行为规范</h2>
+                <ul>
+                    <li>评论、回复应保持友善和建设性，避免争吵和互怼。</li>
+                    <li>禁止恶意举报、刷赞、刷评论等破坏社区秩序的行为。</li>
+                    <li>尊重创作者，未经授权不得搬运他人作品。</li>
+                </ul>
+
+                <h2>四、举报与处理</h2>
+                <p>如果您发现违反公约的内容或行为，请使用平台举报功能或发送邮件至 <a href="mailto:help@sytronichub.com">help@sytronichub.com</a> 进行举报。我们将在合理时间内核查并采取相应措施，包括但不限于删除内容、警告、限制功能、封禁账号等。</p>
+
+                <h2>五、违规处理措施</h2>
+                <p>对于违反公约的用户，我们视情节轻重采取以下处理：</p>
+                <ul>
+                    <li>轻度违规：删除违规内容并发送警告。</li>
+                    <li>中度违规：限制部分功能（如评论、发布）一段时间。</li>
+                    <li>严重违规：永久封禁账号，并保留追究法律责任的权利。</li>
+                </ul>
+
+                <h2>六、公约更新</h2>
+                <p>我们保留适时修订本公约的权利。更新版本将在平台公布，修改生效后继续使用服务即视为接受新公约。</p>
+
+                <h2>七、联系我们</h2>
+                <p>如有任何疑问或建议，请通过 <a href="mailto:help@sytronichub.com">help@sytronichub.com</a> 与我们联系。</p>
+            </div>
+
+            <div class="policy-content policy-version" data-date="2026-08-06" data-updated="2026年8月6日" hidden>
+                <p>欢迎来到 Sytronic Hub 社区。我们致力于为每一位用户提供开放、包容、友善的交流环境。请您仔细阅读并遵守本社区公约，共同维护社区的和谐与健康。</p>
+
+                <h2>一、基本准则</h2>
+                <ul>
+                    <li>尊重他人：保持礼貌和同理心，禁止人身攻击、侮辱、歧视或骚扰其他用户。</li>
+                    <li>文明发言：不使用粗俗、仇恨或威胁性语言。</li>
+                    <li>内容合法：禁止发布任何违反中华人民共和国法律法规的内容。</li>
+                </ul>
+
+                <h2>二、内容规范</h2>
+                <h3>2.1 允许的内容</h3>
+                <p>您可以分享与 ACG（动画、漫画、游戏）、音乐、科技、生活等主题相关的原创或合法转载内容。鼓励高质量、有见解的讨论。</p>
+                <h3>2.2 禁止的内容</h3>
+                <ul>
+                    <li>色情、裸露、性暗示或低俗内容。</li>
+                    <li>暴力、血腥、恐怖主义或煽动暴力。</li>
+                    <li>虚假信息、谣言或误导性内容。</li>
+                    <li>侵犯他人版权、商标权或隐私权的内容。</li>
+                    <li>广告、垃圾信息或恶意刷屏。</li>
+                    <li>任何形式的赌博、毒品或违法交易信息。</li>
+                </ul>
+
+                <h2>三、互动行为规范</h2>
+                <ul>
+                    <li>评论、回复应保持友善和建设性，避免争吵和互怼。</li>
+                    <li>禁止恶意举报、刷赞、刷评论等破坏社区秩序的行为。</li>
+                    <li>尊重创作者，未经授权不得搬运他人作品。</li>
+                </ul>
+
+                <h2>四、举报与处理</h2>
+                <p>如果您发现违反公约的内容或行为，请使用平台举报功能或发送邮件至 <a href="mailto:help@sytronichub.com">help@sytronichub.com</a> 进行举报。我们将在合理时间内核查并采取相应措施，包括但不限于删除内容、警告、限制功能、封禁账号等。</p>
+
+                <h2>五、违规处理措施</h2>
+                <p>对于违反公约的用户，我们视情节轻重采取以下处理：</p>
+                <ul>
+                    <li>轻度违规：删除违规内容并发送警告。</li>
+                    <li>中度违规：限制部分功能（如评论、发布）一段时间。</li>
+                    <li>严重违规：永久封禁账号，并保留追究法律责任的权利。</li>
+                </ul>
+
+                <h2>六、公约更新</h2>
+                <p>我们保留适时修订本公约的权利。更新版本将在平台公布，修改生效后继续使用服务即视为接受新公约。</p>
+
+                <h2>七、联系我们</h2>
+                <p>如有任何疑问或建议，请通过 <a href="mailto:help@sytronichub.com">help@sytronichub.com</a> 与我们联系。</p>
+            </div>
+
             <div class="back-link-group">
                 <a href="/">← 返回政策中心</a>
             </div>
         </div>
     </main>
+
+
+    <script>
+        (function () {
+            var select = document.getElementById('policyVersion');
+            var updated = document.getElementById('policyUpdated');
+            var note = document.getElementById('policyHistoryNote');
+            var noteVersion = document.getElementById('policyHistoryVersion');
+            var sections = Array.prototype.slice.call(document.querySelectorAll('.policy-version'));
+            if (!select || !sections.length) return;
+            var current = sections[0].getAttribute('data-date');
+            var byDate = {};
+            sections.forEach(function (section) {
+                byDate[section.getAttribute('data-date')] = section;
+            });
+            function apply(date, replaceUrl) {
+                var section = byDate[date] || sections[0];
+                var selected = section.getAttribute('data-date');
+                sections.forEach(function (item) { item.hidden = item !== section; });
+                select.value = selected;
+                if (updated) updated.textContent = '最后更新：' + section.getAttribute('data-updated');
+                var isOld = selected !== current;
+                if (note) note.hidden = !isOld;
+                if (noteVersion) noteVersion.textContent = section.getAttribute('data-updated');
+                if (replaceUrl) {
+                    var url = new URL(window.location.href);
+                    if (isOld) url.searchParams.set('date', selected);
+                    else url.searchParams.delete('date');
+                    history.replaceState(null, '', url.toString());
+                }
+            }
+            select.addEventListener('change', function () { apply(select.value, true); });
+            var wanted = new URLSearchParams(window.location.search).get('date');
+            apply(wanted || current, false);
+        })();
+    </script>
 
 </body>
 </html>
