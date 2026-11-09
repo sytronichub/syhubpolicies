@@ -638,7 +638,6 @@
     <script>
         (function () {
             var select = document.getElementById('policyVersion');
-            var updated = document.getElementById('policyUpdated');
             var note = document.getElementById('policyHistoryNote');
             var noteVersion = document.getElementById('policyHistoryVersion');
             var sections = Array.prototype.slice.call(document.querySelectorAll('.policy-version'));
@@ -653,7 +652,6 @@
                 var selected = section.getAttribute('data-date');
                 sections.forEach(function (item) { item.hidden = item !== section; });
                 select.value = selected;
-                if (updated) updated.textContent = '最后更新：' + section.getAttribute('data-updated');
                 var isOld = selected !== current;
                 if (note) note.hidden = !isOld;
                 if (noteVersion) noteVersion.textContent = section.getAttribute('data-updated');
