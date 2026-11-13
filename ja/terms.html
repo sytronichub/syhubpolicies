@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>ユーザーサービス契約 - Sytronic Hub</title>
+    <link rel="Shortcut Icon" href="https://static.sytronichub.com/images/favicon.ico" />
+    <link rel="Bookmark" href="https://static.sytronichub.com/images/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <meta name="description" content="详细阅读用户服务协议，了解您的权利与义务。使用本平台即表示您同意遵守本协议。Sytronic Hub，让兴趣与众不同。" />
+    <meta name="keywords" content="用户服务协议, 使用条款, 服务条款, 用户协议, Sytronic Hub" />
+    <style>
+        /* 与隐私政策页面完全相同的样式，复用 */
+        :root {
+            --primary: #43A047;
+            --on-primary: #FFFFFF;
+            --primary-container: #C8E6C9;
+            --on-primary-container: #1B5E20;
+            --secondary: #42A5F5;
+            --on-secondary: #FFFFFF;
+            --secondary-container: #BBDEFB;
+            --on-secondary-container: #0D47A1;
+            --surface: #F7FAF7;
+            --surface-dim: #D8DDD8;
+            --surface-cl: #FFFFFF;
+            --surface-clo: #F1F6F1;
+            --surface-c: #EBF0EB;
+            --surface-ch: #E3EAE3;
+            --surface-chh: #DDE4DD;
+            --on-surface: #191D19;
+            --on-sv: #414941;
+            --outline: #717971;
+            --outline-v: #C1C9C1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Nunito', 'sans-serif';
+            background: var(--surface);
+            color: var(--on-surface);
+            padding-top: 64px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (max-width: 1023px) {
+            body {
+                padding-top: 56px;
+            }
+        }
+
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: var(--surface);
+            padding: 0 24px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        @media (max-width: 1023px) {
+            .nav-bar {
+                height: 56px;
+                padding: 0 16px;
+            }
+        }
+
+        .nav-inner {
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--on-surface);
+            font-weight: 900;
+            font-size: 18px;
+            letter-spacing: -0.3px;
+        }
+
+        .nav-brand img {
+            width: 32px;
+            height: 32px;
+            border-radius: 9px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .nav-brand span {
+            font-size: 18px;
+            font-weight: 900;
+            color: var(--on-surface);
+        }
+
+        @media (max-width: 1023px) {
+            .nav-brand img {
+                width: 28px;
+                height: 28px;
+            }
+            .nav-brand span {
+                font-size: 16px;
+            }
+        }
+
+        .main-wrap {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 40px 24px 60px;
+        }
+
+        .main-inner {
+            max-width: 820px;
+            width: 100%;
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--on-surface);
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+
+        .last-updated {
+            font-size: 14px;
+            color: var(--outline);
+            font-weight: 600;
+            margin-bottom: 28px;
+            border-bottom: 2px solid var(--surface-ch);
+            padding-bottom: 12px;
+        }
+
+        .policy-content h2 {
+            font-size: 22px;
+            font-weight: 800;
+            margin: 28px 0 12px 0;
+            color: var(--on-surface);
+        }
+
+        .policy-content h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 20px 0 8px 0;
+            color: var(--on-surface);
+        }
+
+        .policy-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--on-sv);
+            margin-bottom: 14px;
+        }
+
+        .policy-content ul {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+        .policy-content ul li {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--on-sv);
+            margin-bottom: 6px;
+        }
+
+        .policy-content a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .policy-content a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link-group {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding-top: 20px;
+            border-top: 2px solid var(--surface-ch);
+        }
+
+        .back-link-group a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+        .back-link-group a:hover {
+            text-decoration: underline;
+            color: #2E7D32;
+        }
+
+        @media (max-width: 639px) {
+            .page-title {
+                font-size: 26px;
+            }
+            .policy-content h2 {
+                font-size: 20px;
+            }
+            .policy-content h3 {
+                font-size: 17px;
+            }
+            .policy-content p,
+            .policy-content ul li {
+                font-size: 15px;
+            }
+        }
+
+        /* ---------- 深色模式 ---------- */
+        :root { color-scheme: light dark; }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #66BB6A;
+                --on-primary: #08210B;
+                --primary-container: #1E3B22;
+                --on-primary-container: #C8E6C9;
+                --secondary: #64B5F6;
+                --on-secondary: #04203A;
+                --secondary-container: #12324D;
+                --on-secondary-container: #BBDEFB;
+                --surface: #0F1210;
+                --surface-dim: #0A0C0A;
+                --surface-cl: #171B18;
+                --surface-clo: #141815;
+                --surface-c: #1B201C;
+                --surface-ch: #242A25;
+                --surface-chh: #2C332D;
+                --on-surface: #E6EBE6;
+                --on-sv: #A9B3AA;
+                --outline: #8B948B;
+                --outline-v: #39423A;
+            }
+            .btn-link:hover { background: #81C784; }
+            .btn-link.secondary:hover { background: #42A5F5; }
+            .back-link-group a:hover { color: #81C784; }
+        }
+
+        /* ---------- 导航右侧链接 ---------- */
+        .nav-links {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .nav-links a {
+            color: var(--on-sv);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: color .2s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* ---------- 修订历史 ---------- */
+        .revision-history {
+            margin-top: 36px;
+            padding-top: 22px;
+            border-top: 2px solid var(--surface-ch);
+        }
+        .revision-history h2 {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--on-surface);
+            margin-bottom: 6px;
+        }
+        .revision-intro {
+            font-size: 13px;
+            color: var(--outline);
+            margin-bottom: 14px;
+        }
+        .revision-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        .revision-table th,
+        .revision-table td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--surface-ch);
+            vertical-align: top;
+        }
+        .revision-table th {
+            color: var(--outline);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .04em;
+            white-space: nowrap;
+        }
+        .revision-table td { color: var(--on-sv); line-height: 1.6; }
+        .revision-table td:first-child {
+            color: var(--on-surface);
+            font-weight: 800;
+            white-space: nowrap;
+        }
+        .revision-table tr:last-child td { border-bottom: none; }
+        .revision-more { margin-top: 14px; font-size: 13px; }
+        .revision-more a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .revision-more a:hover { text-decoration: underline; }
+
+        /* ---------- 版本切换（只在政策详情页；主页不显示修订记录） ---------- */
+        .policy-version-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin: -12px 0 24px;
+            padding: 12px 14px;
+            background: var(--surface-clo);
+            border: 1px solid var(--surface-ch);
+            border-radius: 12px;
+        }
+        .policy-version-bar label {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--on-sv);
+        }
+        .version-select {
+            appearance: none;
+            border: 1px solid var(--outline-v);
+            border-radius: 9px;
+            background: var(--surface-cl);
+            color: var(--on-surface);
+            font: 700 13px 'Nunito', sans-serif;
+            padding: 8px 34px 8px 12px;
+            cursor: pointer;
+            background-image: linear-gradient(45deg, transparent 50%, var(--outline) 50%), linear-gradient(135deg, var(--outline) 50%, transparent 50%);
+            background-position: calc(100% - 16px) 50%, calc(100% - 11px) 50%;
+            background-size: 5px 5px, 5px 5px;
+            background-repeat: no-repeat;
+        }
+        .version-select:focus { outline: 2px solid var(--primary-container); outline-offset: 1px; }
+        .policy-history-note {
+            display: block;
+            margin: -8px 0 22px;
+            padding: 10px 14px;
+            border-left: 3px solid var(--primary);
+            background: var(--primary-container);
+            color: var(--on-primary-container);
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 0 10px 10px 0;
+        }
+        .policy-history-note a { color: var(--on-primary-container); text-decoration: underline; }
+        .policy-version[hidden], .policy-history-note[hidden] { display: none !important; }
+    </style>
+</head><body><nav class="nav-bar"><div class="nav-inner"><a href="/ja/" class="nav-brand"><img src="https://static.sytronichub.com/images/solar-logo.png" alt="Sytronic Hub Logo" /><span>ポリシーセンター</span></a></div></nav>
+<main class="main-wrap"><div class="main-inner"><h1 class="page-title">ユーザーサービス契約</h1><div class="last-updated">最終更新：2026年11月10日</div><div style="font-size:13px;margin:10px 0"><a href="/zh-hans/">簡体字中国語</a> <a href="/zh-hant/">繁體中文</a> <a href="/en/">English</a> <a href="/ja/">日本語</a> <a href="/ko/">한국어</a></div>
+<div class="policy-content policy-version" data-date="2026-11-12" data-updated="2026年11月10日">
+<p>本「ユーザーサービス契約」（以下「本契約」）は、お客様と Sytronic Hub（以下「当社」または「本プラットフォーム」）との間の、本サービスの利用に関する法的契約です。よくお読みください。「同意」をクリックするか本プラットフォームの利用を継続することで、本契約の全条件に同意したものとみなされます。</p>
+<h2>1. アカウント登録と利用</h2><h3>1.1 登録</h3><p>真実、正確かつ完全な登録情報を提供し、これを秘密に保持してください。アカウントで行われるすべての行為について法的責任を負います。</p>
+<h3>1.2 登録 IP と地域</h3><p>登録時に IP アドレスと対応する国・地域（CN、HK、US などの ISO コード）を記録します。アカウント管理方法は登録地域により異なる場合があります。</p>
+<h3>1.3 中国本土ユーザーの実名認証</h3><p>中国本土のユーザーは現地法により実名認証が必要です。サイト内または WeChat ミニプログラムで認証できます。未認証の場合、投稿・コメント等のコミュニティ機能を利用できないことがあります。</p>
+<h3>1.4 アカウントの安全</h3><p>パスワードを適切に管理し、不正利用を発見した場合は直ちに通知してください。ご自身の原因による盗難・損失について当社は責任を負いません。</p>
+<h3>1.5 アカウントの帰属</h3><p>本プラットフォームのアカウントは Sytronic Hub に帰属します。お客様は本契約と規則に基づく使用権のみを得て、販売、譲渡、賃貸、貸与その他他人への提供はできません。契約終了またはアカウントが法的に処分された場合、当社は回収できます。</p>
+<h3>1.6 違反とアカウント制限</h3><p>法律、本契約、プラットフォーム規則（コミュニティガイドラインを含む）に違反した場合、当社は状況に応じ、コンテンツの削除・遮断・返却、コメント・投稿・メッセージ機能の制限、サービスの停止、アカウントの凍結、法的責任の追及を行うことができます。アカウント削除後もこれらの措置は免除されません。</p>
+<h3>1.7 アカウント削除と連携情報</h3><p>所定の手続でアカウント削除を申請できます。申請時にアカウントが凍結中の場合、削除後も電話番号、メール、第三者アカウント等の連携情報は自動的に解除されません。これらの情報は法令およびセキュリティ・監査上の必要により保持され、同一情報での再登録・連携に影響する場合があります。</p>
+<h2>2. ユーザー行動規範</h2><p>法令を遵守し、以下の行為を行ってはなりません。</p><ul><li>ポルノ、暴力、賭博、テロ、名誉毀損、詐欺等の違法情報の投稿・拡散。</li><li>知的財産権、プライバシー、名誉等の権利侵害。</li><li>違法取引やマネーロンダリングへの利用。</li><li>ウイルス、悪意ある攻撃、不正なデータ収集等による運営妨害。</li><li>他人・団体のなりすまし、身分情報の偽造。</li></ul>
+<h2>3. コンテンツと知的財産</h2><p>投稿・アップロードしたコンテンツ（動画、音声、文章、画像等）の知的財産権はお客様または原権利者に帰属します。当社はサービス提供の目的に限り、世界中で無償・非独占的に保存、表示、配信、宣伝するライセンスを取得します。本プラットフォームのデザイン、コード、商標、アイコン等は当社に帰属し、書面許可なく複製・改変・商用利用できません。</p>
+<h2>4. サービスの変更・中断</h2><p>当社はいつでもサービスの一部または全部を変更、停止、終了する権利を留保し、可能な限り公告またはメールで事前通知します。不可抗力、保守、アップグレード等による中断については、合理的範囲で損失回避に努めます。</p>
+<h2>5. 免責</h2><p>コンテンツはユーザーが提供するものであり、正確性、完全性、信頼性を保証しません。サービスの利用は自己責任で行ってください。法令で認められる最大限の範囲で、利用または利用不能により生じた直接的・間接的損害について責任を負いません。</p>
+<h2>6. 契約の変更</h2><p>当社は本契約を随時改定し、更新版を公表します。改定後もサービスを利用した場合、改定に同意したものとみなされます。</p>
+<h2>7. 準拠法と紛争解決</h2><p>本契約は中華人民共和国法に準拠します。紛争はまず協議により解決し、協議が調わない場合、プラットフォーム運営者の所在地の管轄裁判所に提訴できます。</p>
+<h2>8. お問い合わせ</h2><p><a href="mailto:help@sytronichub.com">help@sytronichub.com</a></p>
+
+<div class="back-link-group"><a href="/ja/">← ポリシーセンターに戻る</a></div></div></div></main></body></html>
