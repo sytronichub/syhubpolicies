@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+<script>
+/* 政策中心根路径 / 旧版路径：按浏览器语言跳到对应语言版本；无匹配则英语。 */
+(function () {
+    var path = (location.pathname || '/').replace(/^\/+|\/+$/g, '').replace(/\.html$/i, '');
+    var doc = (path === '' || path === 'index') ? '' : path;
+    var supported = { terms: 1, privacy: 1, 'community-guideline': 1, 'account-deletion': 1, 'minor-agreement': 1 };
+    if (doc && !supported[doc]) return;
+    function pick() {
+        var langs = (navigator.languages && navigator.languages.length)
+            ? navigator.languages : [navigator.language || 'en'];
+        for (var i = 0; i < langs.length; i++) {
+            var l = String(langs[i] || '').toLowerCase();
+            if (l.indexOf('zh') === 0) {
+                return /hant|tw|hk|mo/.test(l) ? 'zh-hant' : 'zh-hans';
+            }
+            if (l.indexOf('en') === 0) return 'en';
+            if (l.indexOf('ja') === 0) return 'ja';
+            if (l.indexOf('ko') === 0) return 'ko';
+        }
+        return 'en';
+    }
+    var lang = pick();
+    var target = '/' + lang + '/' + (doc ? doc : '');
+    location.replace(target);
+})();
+</script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
     <title>社区公约 - Sytronic Hub</title>
