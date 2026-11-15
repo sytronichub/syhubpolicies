@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>User Service Agreement - Sytronic Hub</title>
+<link href="https://static.sytronichub.com/images/favicon.ico" rel="Shortcut Icon"/>
+<link href="https://static.sytronichub.com/images/favicon.ico" rel="Bookmark"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<meta content="Lesen Sie die Nutzerservicevereinbarung ausführlich und erfahren Sie mehr über Ihre Rechte und Pflichten. Die Nutzung dieser Plattform bedeutet, dass Sie dieser Vereinbarung nachkommen.Sytronic Hub macht Ihre Interessen unterschiedlich." name="description"/>
+<meta content="Nutzervereinbarung, Nutzungsbedingungen, Nutzungsbedingungen, Nutzervereinbarung, Sytronic Hub" name="keywords"/>
+<style>
+        /* 与隐私政策页面完全相同的样式，复用 */
+        :root {
+            --primary: #43A047;
+            --on-primary: #FFFFFF;
+            --primary-container: #C8E6C9;
+            --on-primary-container: #1B5E20;
+            --secondary: #42A5F5;
+            --on-secondary: #FFFFFF;
+            --secondary-container: #BBDEFB;
+            --on-secondary-container: #0D47A1;
+            --surface: #F7FAF7;
+            --surface-dim: #D8DDD8;
+            --surface-cl: #FFFFFF;
+            --surface-clo: #F1F6F1;
+            --surface-c: #EBF0EB;
+            --surface-ch: #E3EAE3;
+            --surface-chh: #DDE4DD;
+            --on-surface: #191D19;
+            --on-sv: #414941;
+            --outline: #717971;
+            --outline-v: #C1C9C1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Nunito', 'sans-serif';
+            background: var(--surface);
+            color: var(--on-surface);
+            padding-top: 64px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (max-width: 1023px) {
+            body {
+                padding-top: 56px;
+            }
+        }
+
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: var(--surface);
+            padding: 0 24px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        @media (max-width: 1023px) {
+            .nav-bar {
+                height: 56px;
+                padding: 0 16px;
+            }
+        }
+
+        .nav-inner {
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--on-surface);
+            font-weight: 900;
+            font-size: 18px;
+            letter-spacing: -0.3px;
+        }
+
+        .nav-brand img {
+            width: 32px;
+            height: 32px;
+            border-radius: 9px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .nav-brand span {
+            font-size: 18px;
+            font-weight: 900;
+            color: var(--on-surface);
+        }
+
+        @media (max-width: 1023px) {
+            .nav-brand img {
+                width: 28px;
+                height: 28px;
+            }
+            .nav-brand span {
+                font-size: 16px;
+            }
+        }
+
+        .main-wrap {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 40px 24px 60px;
+        }
+
+        .main-inner {
+            max-width: 820px;
+            width: 100%;
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--on-surface);
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+
+        .last-updated {
+            font-size: 14px;
+            color: var(--outline);
+            font-weight: 600;
+            margin-bottom: 28px;
+            border-bottom: 2px solid var(--surface-ch);
+            padding-bottom: 12px;
+        }
+
+        .policy-content h2 {
+            font-size: 22px;
+            font-weight: 800;
+            margin: 28px 0 12px 0;
+            color: var(--on-surface);
+        }
+
+        .policy-content h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 20px 0 8px 0;
+            color: var(--on-surface);
+        }
+
+        .policy-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--on-sv);
+            margin-bottom: 14px;
+        }
+
+        .policy-content ul {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+        .policy-content ul li {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--on-sv);
+            margin-bottom: 6px;
+        }
+
+        .policy-content a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .policy-content a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link-group {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding-top: 20px;
+            border-top: 2px solid var(--surface-ch);
+        }
+
+        .back-link-group a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+        .back-link-group a:hover {
+            text-decoration: underline;
+            color: #2E7D32;
+        }
+
+        @media (max-width: 639px) {
+            .page-title {
+                font-size: 26px;
+            }
+            .policy-content h2 {
+                font-size: 20px;
+            }
+            .policy-content h3 {
+                font-size: 17px;
+            }
+            .policy-content p,
+            .policy-content ul li {
+                font-size: 15px;
+            }
+        }
+
+        /* ---------- 深色模式 ---------- */
+        :root { color-scheme: light dark; }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #66BB6A;
+                --on-primary: #08210B;
+                --primary-container: #1E3B22;
+                --on-primary-container: #C8E6C9;
+                --secondary: #64B5F6;
+                --on-secondary: #04203A;
+                --secondary-container: #12324D;
+                --on-secondary-container: #BBDEFB;
+                --surface: #0F1210;
+                --surface-dim: #0A0C0A;
+                --surface-cl: #171B18;
+                --surface-clo: #141815;
+                --surface-c: #1B201C;
+                --surface-ch: #242A25;
+                --surface-chh: #2C332D;
+                --on-surface: #E6EBE6;
+                --on-sv: #A9B3AA;
+                --outline: #8B948B;
+                --outline-v: #39423A;
+            }
+            .btn-link:hover { background: #81C784; }
+            .btn-link.secondary:hover { background: #42A5F5; }
+            .back-link-group a:hover { color: #81C784; }
+        }
+
+        /* ---------- 导航右侧链接 ---------- */
+        .nav-links {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .nav-links a {
+            color: var(--on-sv);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: color .2s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* ---------- 修订历史 ---------- */
+        .revision-history {
+            margin-top: 36px;
+            padding-top: 22px;
+            border-top: 2px solid var(--surface-ch);
+        }
+        .revision-history h2 {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--on-surface);
+            margin-bottom: 6px;
+        }
+        .revision-intro {
+            font-size: 13px;
+            color: var(--outline);
+            margin-bottom: 14px;
+        }
+        .revision-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        .revision-table th,
+        .revision-table td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--surface-ch);
+            vertical-align: top;
+        }
+        .revision-table th {
+            color: var(--outline);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .04em;
+            white-space: nowrap;
+        }
+        .revision-table td { color: var(--on-sv); line-height: 1.6; }
+        .revision-table td:first-child {
+            color: var(--on-surface);
+            font-weight: 800;
+            white-space: nowrap;
+        }
+        .revision-table tr:last-child td { border-bottom: none; }
+        .revision-more { margin-top: 14px; font-size: 13px; }
+        .revision-more a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .revision-more a:hover { text-decoration: underline; }
+
+        /* ---------- 版本切换（只在政策详情页；主页不显示修订记录） ---------- */
+        .policy-version-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin: -12px 0 24px;
+            padding: 12px 14px;
+            background: var(--surface-clo);
+            border: 1px solid var(--surface-ch);
+            border-radius: 12px;
+        }
+        .policy-version-bar label {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--on-sv);
+        }
+        .version-select {
+            appearance: none;
+            border: 1px solid var(--outline-v);
+            border-radius: 9px;
+            background: var(--surface-cl);
+            color: var(--on-surface);
+            font: 700 13px 'Nunito', sans-serif;
+            padding: 8px 34px 8px 12px;
+            cursor: pointer;
+            background-image: linear-gradient(45deg, transparent 50%, var(--outline) 50%), linear-gradient(135deg, var(--outline) 50%, transparent 50%);
+            background-position: calc(100% - 16px) 50%, calc(100% - 11px) 50%;
+            background-size: 5px 5px, 5px 5px;
+            background-repeat: no-repeat;
+        }
+        .version-select:focus { outline: 2px solid var(--primary-container); outline-offset: 1px; }
+        .policy-history-note {
+            display: block;
+            margin: -8px 0 22px;
+            padding: 10px 14px;
+            border-left: 3px solid var(--primary);
+            background: var(--primary-container);
+            color: var(--on-primary-container);
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 0 10px 10px 0;
+        }
+        .policy-history-note a { color: var(--on-primary-container); text-decoration: underline; }
+        .policy-version[hidden], .policy-history-note[hidden] { display: none !important; }
+    </style>
+</head>
+<body>
+<nav aria-label="Führende Navigation" class="nav-bar" role="navigation">
+<div class="nav-inner">
+<a aria-label="StartseiteSytronic Hub" class="nav-brand" href="/zh-hans/">
+<img alt="Sytronic Hub Logo" src="https://static.sytronichub.com/images/solar-logo.png"/>
+<span>Politikzentrum</span>
+</a>
+</div>
+</nav>
+<main class="main-wrap">
+<div class="main-inner">
+<h1 class="page-title">Nutzerdienstvertrag</h1>
+<div class="last-updated" id="policyUpdated">Letzte Aktualisierung: 10. November 2026</div>
+<div class="policy-version-bar">
+<label for="policyVersion">Historische Version</label>
+<select aria-label="Historische Version auswählen" class="version-select" id="policyVersion">
+<option selected="" value="2026-11-10">10. November 2026 (derzeit)</option>
+<option value="2026-11-04">4. November 2026</option>
+<option value="2026-10-30">30. Oktober 2026</option>
+<option value="2026-08-06">6. August 2026</option>
+</select>
+</div>
+<div class="policy-history-note" hidden="" id="policyHistoryNote">Sie betrachten die historische Version.<span id="policyHistoryVersion">10. November 2026</span>Es handelt sich dabei um den ursprünglichen Text, der damals in Kraft war.<a href="?">Zurück zur neuesten Version</a>
+</div>
+<div class="policy-content policy-version" data-date="2026-11-10" data-updated="10. November 2026">
+<p>Diese Nutzerservicevereinbarung (im Folgenden „Diese Vereinbarung“) ist eine rechtliche Vereinbarung zwischen Ihnen (im Folgenden „Nutzer“ oder „Sie“) und Sytronic Hub (im Folgenden „wir“ oder „Plattform“) über die Nutzung der Dienste dieser Plattform. Bitte lesen Sie diese Vereinbarung sorgfältig durch und klicken Sie auf „Zustimmen“ oder verwenden Sie die Plattform weiterhin, um alle Bedingungen dieser Vereinbarung zu akzeptieren.</p>
+<h2>Registrierung und Nutzung von Konten</h2>
+<h3>1.1 Registrierung des Kontos</h3>
+<p>Sie müssen echte, genaue und vollständige Registrierungsinformationen angeben und sind dafür verantwortlich, diese vertraulich zu behandeln. Sie übernehmen die gesetzliche Verantwortung für alle Aktivitäten, die mit Ihrem Konto durchgeführt werden.</p>
+<h3>1.2 IP-Registrierung und Zugehörigkeit</h3>
+<p>Wenn Sie sich registrieren, speichern wir die IP-Adresse, die Sie bei der Registrierung verwendeten, und die entsprechende Zugehörigkeit (Länder/Regionen, z. B. ISO-Codes für CN, HK, USA usw.) und die Art und Weise, wie Ihr Konto verwaltet wird, kann sich je nach Region ändern.</p>
+<h3>1.3 Benutzername des chinesischen Kontinents</h3>
+<p>Für Nutzer auf dem chinesischen Festland müssen wir gemäß den lokalen Gesetzen die Echtname-Authentifizierung durchführen. Sie können die Echtname-Authentifizierung auf der Website oder über das WeChat-Programm durchführen.</p>
+<p>Wenn Sie die Echtname-Authentifizierung oder WeChat-Authentifizierung nicht abgeschlossen haben, können Sie möglicherweise keine Community-Funktionen wie Beiträge, Kommentare verwenden.</p>
+<h3>1.4 Kontosicherheit</h3>
+<p>Sie sollten Ihr Konto-Passwort ordnungsgemäß speichern und uns unverzüglich informieren, wenn Sie eine unbefugte Nutzung Ihres Kontos feststellen. Wir sind nicht verantwortlich für die Diebstahl oder den Verlust Ihres Kontos, der aus Ihren eigenen Gründen verursacht wurde.</p>
+<h3>1.5 Kontoinhalt</h3>
+<p>Das Konto, das Sie auf dieser Plattform registriert haben, gehört Sytronic Hub. Sie haben nur das Recht, das Konto gemäß dieser Vereinbarung und den Regeln der Plattform zu nutzen, und dürfen das Konto nicht verkaufen, übertragen, vermieten, ausleihen oder auf andere Weise an andere weitergeben. Das Recht, das Konto zu benutzen, gilt nur in Übereinstimmung mit dieser Vereinbarung; die Plattform hat das Recht, das Konto zurückzuziehen, wenn diese Vereinbarung beendet wird oder das Konto nach dem Gesetz gelöscht wird.</p>
+<h3>1.6 Vertragsverletzungen und Kontobeschränkungen</h3>
+<p>Wenn Sie gegen Gesetze, diese Vereinbarung oder die Regeln der Plattform verstoßen (einschließlich der Gemeinschaftsvereinbarung), behalten wir uns das Recht vor, eine oder mehrere Maßnahmen zu ergreifen, einschließlich, aber nicht beschränkt auf: Löschung, Sperrung oder Rückgabe von Inhalten; Einschränkung von Funktionen wie Kommentare, Veröffentlichungen, Privatsphäre; Aussetzung oder Beendigung der Dienste; Sperrung von Konten; und die Verfolgung gesetzlicher Haftung.</p>
+<h3>1.7 Konto Stornierung und Bindungsinformationen</h3>
+<p>Sie verstehen und erklären sich damit einverstanden, dass, wenn Ihr Konto zum Zeitpunkt der Annullierung des Antrags in einem Sperrzustand ist und nach der Annullierung des Kontos Ihre ursprünglich gebundenen Telefonnummern, Postkarten, Konten Dritter nicht automatisch mit der Annullierung des Kontos gelöscht werden; die entsprechenden Bindungsinformationen werden gemäß den gesetzlichen Vorschriften und den Sicherheits- und Prüfungsanforderungen der Plattform beibehalten und Sie möglicherweise nachträglich mit den gleichen gebundenen Informationen registrieren oder andere Konten binden können.</p>
+<h2>II. Verhaltensregeln der Nutzer</h2>
+<p>Bei der Nutzung der Plattform müssen Sie sich an die gesetzlichen Vorschriften halten und dürfen nicht:</p>
+<ul>
+<li>Verbreitung und Verbreitung von rechtswidrigen Informationen, einschließlich, aber nicht beschränkt auf Pornografie, Gewalt, Glücksspiel, Terrorismus, Verleumdung und Betrug.</li>
+<li>Verletzung der Rechte des geistigen Eigentums, des Rechts auf Privatsphäre und des Rechts auf Ehre.</li>
+<li>Verwendung der Plattform für illegale Transaktionen oder Geldwäsche.</li>
+<li>Störung des normalen Betriebs der Plattform, einschließlich der Verbreitung von Viren, böswilligen Angriffen und illegalen Datenraub.</li>
+<li>Andere Personen oder Organisationen vorgeben oder Identitätsdaten verfälschen.</li>
+</ul>
+<h2>c) Urheberrechte und geistiges Eigentum</h2>
+<p>Die geistigen Eigentumsrechte an Inhalten, die Sie auf dieser Plattform hochladen oder veröffentlichen (einschließlich, aber nicht beschränkt auf Videos, Audios, Texte, Bilder usw.), gehören Ihnen oder dem Urheberrechtsinhaber. Sie erteilen uns eine weltweite, kostenlose und nicht-exklusive Lizenz, um Ihre Inhalte zu speichern, darzustellen, zu verbreiten und zu verbreiten (nur für die Zwecke des Dienstes).</p>
+<p>Das Design, der Code, die Markenzeichen, Symbole und andere geistige Eigentumsrechte der Plattform sind unser Eigentum und dürfen nicht ohne schriftliche Genehmigung kopiert, verändert oder für kommerzielle Zwecke verwendet werden.</p>
+<h2>Änderungen und Unterbrechungen des Dienstes</h2>
+<p>Wir behalten uns das Recht vor, den Service jederzeit zu ändern, zu unterbrechen oder teilweise oder vollständig zu beenden, aber wir werden Sie im Voraus durch Mitteilung oder E-Mail benachrichtigen. Wir werden unser Bestes tun, Verluste zu vermeiden, wenn der Service aus zwingenden Kräften, Systemwartung oder Upgrades aus vernünftigen Gründen unterbrochen wird.</p>
+<h2>V. Haftungsausschluss</h2>
+<p>Die Inhalte dieser Plattform werden von den Nutzern selbst bereitgestellt, und wir garantieren nicht die Genauigkeit, Vollständigkeit oder Zuverlässigkeit der Inhalte. Ihre Nutzung der Plattformdienste erfolgt auf eigene Gefahr. In dem gesetzlich zulässigen Umfang übernehmen wir keine direkten oder indirekten Verluste, die sich aus der Nutzung oder Unfähigkeit der Dienste ergeben.</p>
+<h2>a) Änderungen des Abkommens</h2>
+<p>Wir können diese Vereinbarung rechtzeitig ändern und die aktualisierte Version wird auf der Plattform veröffentlicht. Wenn Sie die Dienste weiterhin nutzen, gilt dies als Ihre Zustimmung zu den geänderten Vereinbarungen.</p>
+<h2>Anwendung des Gesetzes und Streitbeilegung</h2>
+<p>Der Abschluss, die Durchführung und die Auslegung dieser Vereinbarung unterliegen dem Recht der Volksrepublik China.Wenn es zu Streitigkeiten kommt, sollten beide Seiten konsultiert werden; wenn keine Konsultation erzielt wird, kann jede Partei einen Rechtsstreit vor dem zuständigen Volksgericht des Ortes der Plattformbetreiber einleiten.</p>
+<h2>8. Kontaktieren Sie uns</h2>
+<p>Wenn Sie Zweifel haben, lesen Sie bitte.<a href="mailto:help@sytronichub.com">help@sytronichub.com</a>Kontaktieren Sie uns.</p>
+</div>
+<div class="policy-content policy-version" data-date="2026-11-04" data-updated="4. November 2026" hidden="">
+<p>Diese Nutzerservicevereinbarung (im Folgenden „Diese Vereinbarung“) ist eine rechtliche Vereinbarung zwischen Ihnen (im Folgenden „Nutzer“ oder „Sie“) und Sytronic Hub (im Folgenden „wir“ oder „Plattform“) über die Nutzung der Dienste dieser Plattform. Bitte lesen Sie diese Vereinbarung sorgfältig durch und klicken Sie auf „Zustimmen“ oder verwenden Sie die Plattform weiterhin, um alle Bedingungen dieser Vereinbarung zu akzeptieren.</p>
+<h2>Registrierung und Nutzung von Konten</h2>
+<h3>1.1 Registrierung des Kontos</h3>
+<p>Sie müssen echte, genaue und vollständige Registrierungsinformationen angeben und sind dafür verantwortlich, diese vertraulich zu behandeln. Sie übernehmen die gesetzliche Verantwortung für alle Aktivitäten, die mit Ihrem Konto durchgeführt werden.</p>
+<h3>1.2 Kontosicherheit</h3>
+<p>Sie sollten Ihr Konto-Passwort ordnungsgemäß speichern und uns unverzüglich informieren, wenn Sie eine unbefugte Nutzung Ihres Kontos feststellen. Wir sind nicht verantwortlich für die Diebstahl oder den Verlust Ihres Kontos, der aus Ihren eigenen Gründen verursacht wurde.</p>
+<h3>1.3 Konto gehört</h3>
+<p>Das Konto, das Sie auf dieser Plattform registriert haben, gehört Sytronic Hub. Sie haben nur das Recht, das Konto gemäß dieser Vereinbarung und den Regeln der Plattform zu nutzen, und dürfen das Konto nicht verkaufen, übertragen, vermieten, ausleihen oder auf andere Weise an andere weitergeben. Das Recht, das Konto zu benutzen, gilt nur in Übereinstimmung mit dieser Vereinbarung; die Plattform hat das Recht, das Konto zurückzuziehen, wenn diese Vereinbarung beendet wird oder das Konto nach dem Gesetz gelöscht wird.</p>
+<h3>1.4 Vertragsverletzungen und Kontobeschränkungen</h3>
+<p>Wenn Sie gegen Gesetze, diese Vereinbarung oder die Regeln der Plattform verstoßen (einschließlich der Gemeinschaftsvereinbarung), behalten wir uns das Recht vor, eine oder mehrere Maßnahmen zu ergreifen, einschließlich, aber nicht beschränkt auf: Löschung, Sperrung oder Rückgabe von Inhalten; Einschränkung von Funktionen wie Kommentare, Veröffentlichungen, Privatsphäre; Aussetzung oder Beendigung der Dienste; Sperrung von Konten; und die Verfolgung gesetzlicher Haftung.</p>
+<h3>1.5 Abmeldung und Bindung von Konten</h3>
+<p>Sie verstehen und erklären sich damit einverstanden, dass, wenn Ihr Konto zum Zeitpunkt der Annullierung des Antrags in einem Sperrzustand ist und nach der Annullierung des Kontos Ihre ursprünglich gebundenen Telefonnummern, Postkarten, Konten Dritter nicht automatisch mit der Annullierung des Kontos gelöscht werden; die entsprechenden Bindungsinformationen werden gemäß den gesetzlichen Vorschriften und den Sicherheits- und Prüfungsanforderungen der Plattform beibehalten und Sie möglicherweise nachträglich mit den gleichen gebundenen Informationen registrieren oder andere Konten binden können.</p>
+<h2>II. Verhaltensregeln der Nutzer</h2>
+<p>Bei der Nutzung der Plattform müssen Sie sich an die gesetzlichen Vorschriften halten und dürfen nicht:</p>
+<ul>
+<li>Verbreitung und Verbreitung von rechtswidrigen Informationen, einschließlich, aber nicht beschränkt auf Pornografie, Gewalt, Glücksspiel, Terrorismus, Verleumdung und Betrug.</li>
+<li>Verletzung der Rechte des geistigen Eigentums, des Rechts auf Privatsphäre und des Rechts auf Ehre.</li>
+<li>Verwendung der Plattform für illegale Transaktionen oder Geldwäsche.</li>
+<li>Störung des normalen Betriebs der Plattform, einschließlich der Verbreitung von Viren, böswilligen Angriffen und illegalen Datenraub.</li>
+<li>Andere Personen oder Organisationen vorgeben oder Identitätsdaten verfälschen.</li>
+</ul>
+<h2>c) Urheberrechte und geistiges Eigentum</h2>
+<p>Die geistigen Eigentumsrechte an Inhalten, die Sie auf dieser Plattform hochladen oder veröffentlichen (einschließlich, aber nicht beschränkt auf Videos, Audios, Texte, Bilder usw.), gehören Ihnen oder dem Urheberrechtsinhaber. Sie erteilen uns eine weltweite, kostenlose und nicht-exklusive Lizenz, um Ihre Inhalte zu speichern, darzustellen, zu verbreiten und zu verbreiten (nur für die Zwecke des Dienstes).</p>
+<p>Das Design, der Code, die Markenzeichen, Symbole und andere geistige Eigentumsrechte der Plattform sind unser Eigentum und dürfen nicht ohne schriftliche Genehmigung kopiert, verändert oder für kommerzielle Zwecke verwendet werden.</p>
+<h2>Änderungen und Unterbrechungen des Dienstes</h2>
+<p>Wir behalten uns das Recht vor, den Service jederzeit zu ändern, zu unterbrechen oder teilweise oder vollständig zu beenden, aber wir werden Sie im Voraus durch Mitteilung oder E-Mail benachrichtigen. Wir werden unser Bestes tun, Verluste zu vermeiden, wenn der Service aus zwingenden Kräften, Systemwartung oder Upgrades aus vernünftigen Gründen unterbrochen wird.</p>
+<h2>V. Haftungsausschluss</h2>
+<p>Die Inhalte dieser Plattform werden von den Nutzern selbst bereitgestellt, und wir garantieren nicht die Genauigkeit, Vollständigkeit oder Zuverlässigkeit der Inhalte. Ihre Nutzung der Plattformdienste erfolgt auf eigene Gefahr. In dem gesetzlich zulässigen Umfang übernehmen wir keine direkten oder indirekten Verluste, die sich aus der Nutzung oder Unfähigkeit der Dienste ergeben.</p>
+<h2>a) Änderungen des Abkommens</h2>
+<p>Wir können diese Vereinbarung rechtzeitig ändern und die aktualisierte Version wird auf der Plattform veröffentlicht. Wenn Sie die Dienste weiterhin nutzen, gilt dies als Ihre Zustimmung zu den geänderten Vereinbarungen.</p>
+<h2>Anwendung des Gesetzes und Streitbeilegung</h2>
+<p>Der Abschluss, die Durchführung und die Auslegung dieser Vereinbarung unterliegen dem Recht der Volksrepublik China.Wenn es zu Streitigkeiten kommt, sollten beide Seiten konsultiert werden; wenn keine Konsultation erzielt wird, kann jede Partei einen Rechtsstreit vor dem zuständigen Volksgericht des Ortes der Plattformbetreiber einleiten.</p>
+<h2>8. Kontaktieren Sie uns</h2>
+<p>Wenn Sie Zweifel haben, lesen Sie bitte.<a href="mailto:help@sytronichub.com">help@sytronichub.com</a>Kontaktieren Sie uns.</p>
+</div>
+<div class="policy-content policy-version" data-date="2026-10-30" data-updated="30. Oktober 2026" hidden="">
+<p>Diese Nutzerservicevereinbarung (im Folgenden „Diese Vereinbarung“) ist eine rechtliche Vereinbarung zwischen Ihnen (im Folgenden „Nutzer“ oder „Sie“) und Sytronic Hub (im Folgenden „wir“ oder „Plattform“) über die Nutzung der Dienste dieser Plattform. Bitte lesen Sie diese Vereinbarung sorgfältig durch und klicken Sie auf „Zustimmen“ oder verwenden Sie die Plattform weiterhin, um alle Bedingungen dieser Vereinbarung zu akzeptieren.</p>
+<h2>Registrierung und Nutzung von Konten</h2>
+<h3>1.1 Registrierung des Kontos</h3>
+<p>Sie müssen echte, genaue und vollständige Registrierungsinformationen angeben und sind dafür verantwortlich, diese vertraulich zu behandeln. Sie übernehmen die gesetzliche Verantwortung für alle Aktivitäten, die mit Ihrem Konto durchgeführt werden.</p>
+<h3>1.2 Kontosicherheit</h3>
+<p>Sie sollten Ihr Konto-Passwort ordnungsgemäß speichern und uns unverzüglich informieren, wenn Sie eine unbefugte Nutzung Ihres Kontos feststellen. Wir sind nicht verantwortlich für die Diebstahl oder den Verlust Ihres Kontos, der aus Ihren eigenen Gründen verursacht wurde.</p>
+<h2>II. Verhaltensregeln der Nutzer</h2>
+<p>Bei der Nutzung der Plattform müssen Sie sich an die gesetzlichen Vorschriften halten und dürfen nicht:</p>
+<ul>
+<li>Verbreitung und Verbreitung von rechtswidrigen Informationen, einschließlich, aber nicht beschränkt auf Pornografie, Gewalt, Glücksspiel, Terrorismus, Verleumdung und Betrug.</li>
+<li>Verletzung der Rechte des geistigen Eigentums, des Rechts auf Privatsphäre und des Rechts auf Ehre.</li>
+<li>Verwendung der Plattform für illegale Transaktionen oder Geldwäsche.</li>
+<li>Störung des normalen Betriebs der Plattform, einschließlich der Verbreitung von Viren, böswilligen Angriffen und illegalen Datenraub.</li>
+<li>Andere Personen oder Organisationen vorgeben oder Identitätsdaten verfälschen.</li>
+</ul>
+<h2>c) Urheberrechte und geistiges Eigentum</h2>
+<p>Die geistigen Eigentumsrechte an Inhalten, die Sie auf dieser Plattform hochladen oder veröffentlichen (einschließlich, aber nicht beschränkt auf Videos, Audios, Texte, Bilder usw.), gehören Ihnen oder dem Urheberrechtsinhaber. Sie erteilen uns eine weltweite, kostenlose und nicht-exklusive Lizenz, um Ihre Inhalte zu speichern, darzustellen, zu verbreiten und zu verbreiten (nur für die Zwecke des Dienstes).</p>
+<p>Das Design, der Code, die Markenzeichen, Symbole und andere geistige Eigentumsrechte der Plattform sind unser Eigentum und dürfen nicht ohne schriftliche Genehmigung kopiert, verändert oder für kommerzielle Zwecke verwendet werden.</p>
+<h2>Änderungen und Unterbrechungen des Dienstes</h2>
+<p>Wir behalten uns das Recht vor, den Service jederzeit zu ändern, zu unterbrechen oder teilweise oder vollständig zu beenden, aber wir werden Sie im Voraus durch Mitteilung oder E-Mail benachrichtigen. Wir werden unser Bestes tun, Verluste zu vermeiden, wenn der Service aus zwingenden Kräften, Systemwartung oder Upgrades aus vernünftigen Gründen unterbrochen wird.</p>
+<h2>V. Haftungsausschluss</h2>
+<p>Die Inhalte dieser Plattform werden von den Nutzern selbst bereitgestellt, und wir garantieren nicht die Genauigkeit, Vollständigkeit oder Zuverlässigkeit der Inhalte. Ihre Nutzung der Plattformdienste erfolgt auf eigene Gefahr. In dem gesetzlich zulässigen Umfang übernehmen wir keine direkten oder indirekten Verluste, die sich aus der Nutzung oder Unfähigkeit der Dienste ergeben.</p>
+<h2>a) Änderungen des Abkommens</h2>
+<p>Wir können diese Vereinbarung rechtzeitig ändern und die aktualisierte Version wird auf der Plattform veröffentlicht. Wenn Sie die Dienste weiterhin nutzen, gilt dies als Ihre Zustimmung zu den geänderten Vereinbarungen.</p>
+<h2>Anwendung des Gesetzes und Streitbeilegung</h2>
+<p>Der Abschluss, die Durchführung und die Auslegung dieser Vereinbarung unterliegen dem Recht der Volksrepublik China.Wenn es zu Streitigkeiten kommt, sollten beide Seiten konsultiert werden; wenn keine Konsultation erzielt wird, kann jede Partei einen Rechtsstreit vor dem zuständigen Volksgericht des Ortes der Plattformbetreiber einleiten.</p>
+<h2>8. Kontaktieren Sie uns</h2>
+<p>Wenn Sie Zweifel haben, lesen Sie bitte.<a href="mailto:help@sytronichub.com">help@sytronichub.com</a>Kontaktieren Sie uns.</p>
+</div>
+<div class="policy-content policy-version" data-date="2026-08-06" data-updated="6. August 2026" hidden="">
+<p>Diese Nutzerservicevereinbarung (im Folgenden „Diese Vereinbarung“) ist eine rechtliche Vereinbarung zwischen Ihnen (im Folgenden „Nutzer“ oder „Sie“) und Sytronic Hub (im Folgenden „wir“ oder „Plattform“) über die Nutzung der Dienste dieser Plattform. Bitte lesen Sie diese Vereinbarung sorgfältig durch und klicken Sie auf „Zustimmen“ oder verwenden Sie die Plattform weiterhin, um alle Bedingungen dieser Vereinbarung zu akzeptieren.</p>
+<h2>Registrierung und Nutzung von Konten</h2>
+<h3>1.1 Registrierung des Kontos</h3>
+<p>Sie müssen echte, genaue und vollständige Registrierungsinformationen angeben und sind dafür verantwortlich, diese vertraulich zu behandeln. Sie übernehmen die gesetzliche Verantwortung für alle Aktivitäten, die mit Ihrem Konto durchgeführt werden.</p>
+<h3>1.2 Kontosicherheit</h3>
+<p>Sie sollten Ihr Konto-Passwort ordnungsgemäß speichern und uns unverzüglich informieren, wenn Sie eine unbefugte Nutzung Ihres Kontos feststellen. Wir sind nicht verantwortlich für die Diebstahl oder den Verlust Ihres Kontos, der aus Ihren eigenen Gründen verursacht wurde.</p>
+<h2>II. Verhaltensregeln der Nutzer</h2>
+<p>Bei der Nutzung der Plattform müssen Sie sich an die gesetzlichen Vorschriften halten und dürfen nicht:</p>
+<ul>
+<li>Verbreitung und Verbreitung von rechtswidrigen Informationen, einschließlich, aber nicht beschränkt auf Pornografie, Gewalt, Glücksspiel, Terrorismus, Verleumdung und Betrug.</li>
+<li>Verletzung der Rechte des geistigen Eigentums, des Rechts auf Privatsphäre und des Rechts auf Ehre.</li>
+<li>Verwendung der Plattform für illegale Transaktionen oder Geldwäsche.</li>
+<li>Störung des normalen Betriebs der Plattform, einschließlich der Verbreitung von Viren, böswilligen Angriffen und illegalen Datenraub.</li>
+<li>Andere Personen oder Organisationen vorgeben oder Identitätsdaten verfälschen.</li>
+</ul>
+<h2>c) Urheberrechte und geistiges Eigentum</h2>
+<p>Die geistigen Eigentumsrechte an Inhalten, die Sie auf dieser Plattform hochladen oder veröffentlichen (einschließlich, aber nicht beschränkt auf Videos, Audios, Texte, Bilder usw.), gehören Ihnen oder dem Urheberrechtsinhaber. Sie erteilen uns eine weltweite, kostenlose und nicht-exklusive Lizenz, um Ihre Inhalte zu speichern, darzustellen, zu verbreiten und zu verbreiten (nur für die Zwecke des Dienstes).</p>
+<p>Das Design, der Code, die Markenzeichen, Symbole und andere geistige Eigentumsrechte der Plattform sind unser Eigentum und dürfen nicht ohne schriftliche Genehmigung kopiert, verändert oder für kommerzielle Zwecke verwendet werden.</p>
+<h2>Änderungen und Unterbrechungen des Dienstes</h2>
+<p>Wir behalten uns das Recht vor, den Service jederzeit zu ändern, zu unterbrechen oder teilweise oder vollständig zu beenden, aber wir werden Sie im Voraus durch Mitteilung oder E-Mail benachrichtigen. Wir werden unser Bestes tun, Verluste zu vermeiden, wenn der Service aus zwingenden Kräften, Systemwartung oder Upgrades aus vernünftigen Gründen unterbrochen wird.</p>
+<h2>V. Haftungsausschluss</h2>
+<p>Die Inhalte dieser Plattform werden von den Nutzern selbst bereitgestellt, und wir garantieren nicht die Genauigkeit, Vollständigkeit oder Zuverlässigkeit der Inhalte. Ihre Nutzung der Plattformdienste erfolgt auf eigene Gefahr. In dem gesetzlich zulässigen Umfang übernehmen wir keine direkten oder indirekten Verluste, die sich aus der Nutzung oder Unfähigkeit der Dienste ergeben.</p>
+<h2>a) Änderungen des Abkommens</h2>
+<p>Wir können diese Vereinbarung rechtzeitig ändern und die aktualisierte Version wird auf der Plattform veröffentlicht. Wenn Sie die Dienste weiterhin nutzen, gilt dies als Ihre Zustimmung zu den geänderten Vereinbarungen.</p>
+<h2>Anwendung des Gesetzes und Streitbeilegung</h2>
+<p>Der Abschluss, die Durchführung und die Auslegung dieser Vereinbarung unterliegen dem Recht der Volksrepublik China.Wenn es zu Streitigkeiten kommt, sollten beide Seiten konsultiert werden; wenn keine Konsultation erzielt wird, kann jede Partei einen Rechtsstreit vor dem zuständigen Volksgericht des Ortes der Plattformbetreiber einleiten.</p>
+<h2>8. Kontaktieren Sie uns</h2>
+<p>Wenn Sie Zweifel haben, lesen Sie bitte.<a href="mailto:help@sytronichub.com">help@sytronichub.com</a>Kontaktieren Sie uns.</p>
+</div>
+<div class="back-link-group">
+<a href="/zh-hans/">← Zurück zum Politikzentrum</a>
+</div>
+</div>
+</main>
+<script>
+        (function () {
+            var select = document.getElementById('policyVersion');
+            var note = document.getElementById('policyHistoryNote');
+            var noteVersion = document.getElementById('policyHistoryVersion');
+            var sections = Array.prototype.slice.call(document.querySelectorAll('.policy-version'));
+            if (!select || !sections.length) return;
+            var current = sections[0].getAttribute('data-date');
+            var byDate = {};
+            sections.forEach(function (section) {
+                byDate[section.getAttribute('data-date')] = section;
+            });
+            function apply(date, replaceUrl) {
+                var section = byDate[date] || sections[0];
+                var selected = section.getAttribute('data-date');
+                sections.forEach(function (item) { item.hidden = item !== section; });
+                select.value = selected;
+                var isOld = selected !== current;
+                if (note) note.hidden = !isOld;
+                if (noteVersion) noteVersion.textContent = section.getAttribute('data-updated');
+                if (replaceUrl) {
+                    var url = new URL(window.location.href);
+                    if (isOld) url.searchParams.set('date', selected);
+                    else url.searchParams.delete('date');
+                    history.replaceState(null, '', url.toString());
+                }
+            }
+            select.addEventListener('change', function () { apply(select.value, true); });
+            var wanted = new URLSearchParams(window.location.search).get('date');
+            apply(wanted || current, false);
+        })();
+    </script>
+</body>
+</html>
