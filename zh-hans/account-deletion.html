@@ -383,6 +383,12 @@
 .lang-switch a{color:var(--primary,#43A047);text-decoration:none;font-weight:600;white-space:nowrap}
 .lang-switch a:hover{text-decoration:underline;text-underline-offset:3px}
 .lang-switch a[aria-current="page"]{color:var(--on-surface,#191D19);font-weight:800}
+</style><style id="policy-version-style">
+.policy-version-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0 0;font-size:13px;color:var(--on-sv,#414941)}
+.policy-version-bar label{font-weight:700}
+.policy-version-bar select{min-height:36px;border:1px solid var(--outline-v,rgba(0,0,0,.15));border-radius:10px;background:var(--surface-cl,#fff);color:var(--on-surface,#191D19);padding:6px 10px;font:inherit}
+.policy-history-note{margin:10px 0 0;font-size:12px;color:var(--on-sv,#414941);background:var(--surface-ch,#f2f5f2);padding:8px 10px;border-radius:10px}
+.policy-history-note[hidden]{display:none}
 </style></head><body>
 <nav aria-label="主导航" class="nav-bar" role="navigation">
 <div class="nav-inner">
@@ -395,7 +401,7 @@
 <main class="main-wrap">
 <div class="main-inner">
 <h1 class="page-title">账号注销协议</h1>
-<div class="last-updated" id="policyUpdated">最后更新：2026年11月15日</div>
+<div class="last-updated" id="policyUpdated">最后更新：2026年11月15日</div><div class="policy-version-bar"><label for="policyVersion">历史版本</label><select aria-label="历史版本" id="policyVersion"><option selected="" value="2026-11-15">2026年11月15日 (当前)</option><option value="2026-11-12">2026年11月12日</option></select></div><div class="policy-history-note" hidden="" id="policyHistoryNote">历史版本: <span id="policyHistoryVersion"></span></div>
 <div class="policy-content policy-version" data-date="2026-11-15" data-updated="2026年11月15日">
 <p>本《账号注销协议》（以下简称“本协议”）是您与 Sytronic Hub（以下简称“我们”或“平台”）之间关于注销 Sytronic Hub 账号的补充协议。注销是不可逆的重要操作，请您在提交前完整阅读本协议，并确认已备份需要保留的内容、结清相关事项。</p>
 <p>您提交注销申请、完成身份验证或点击确认注销，即表示您已理解并同意本协议。若您不同意，请不要提交注销申请。</p>
@@ -443,9 +449,70 @@
 <p>我们可能根据法律法规、监管要求或产品变化更新本协议。更新后的协议将在政策中心公布并标明生效日期；重大变更会以适当方式提示。更新生效后，您继续使用平台服务即视为接受更新后的协议。</p>
 <h2>九、联系我们</h2>
 <p>如对本协议或账号注销有疑问，可通过平台「反馈与建议」、帮助中心或 <a href="mailto:help@sytronichub.com">help@sytronichub.com</a> 与我们联系。</p>
+</div><div class="policy-content policy-version" data-date="2026-11-12" data-updated="2026年11月12日" hidden="">
+<p>本《账号注销协议》（以下简称“本协议”）是您与 Sytronic Hub（以下简称“我们”或“平台”）之间关于注销 Sytronic Hub 账号的补充协议。注销前，请完整阅读并理解本协议；您提交注销申请即表示同意本协议。</p>
+<h2>一、适用范围</h2>
+<p>本协议适用于您主动申请注销 Sytronic Hub 账号，以及因账号注销而产生的数据处理、内容展示和后续影响。本协议与《用户服务协议》《隐私政策》《社区公约》共同适用；如有不一致，以本协议关于注销的特别约定为准。</p>
+<h2>二、注销条件</h2>
+<ul>
+<li>您应为该账号的合法使用权人，并能够通过平台要求的身份验证。</li>
+<li>账号不存在未完成的交易、未处理的举报、未结清的款项或其他平台认为需要先处理完毕的事项。</li>
+<li>账号不存在法律法规、监管要求或司法/行政机关要求保留的情形。</li>
+</ul>
+<h2>三、注销流程</h2>
+<ul>
+<li>您可以在账号设置中提交注销申请；平台会验证您的身份并告知注销后果。</li>
+<li>为避免误操作，注销申请可能设置冷静期。冷静期内您可以按平台流程撤销申请。</li>
+<li>冷静期届满且无异常情形时，平台执行注销。注销完成后，账号将无法登录，且通常无法恢复。</li>
+</ul>
+<h2>四、注销后的影响</h2>
+<ul>
+<li>账号的登录能力、个人资料页及社区功能将停止使用。</li>
+<li>账号注销后，其用户资料页不再展示该账号发布过的视频、图文、动态等内容。</li>
+<li>账号发布的内容可能依据法律法规、平台规则或第三方权利人的要求继续保留、删除或做其他处理。</li>
+<li>账号绑定的手机号、邮箱、第三方账号等信息，可能按法律法规及平台安全、审计需要继续保留，且可能影响您后续使用同一绑定信息注册或绑定其他账号。</li>
+<li>账号注销不影响注销前已经产生的法律责任、平台依约享有的权利，以及依法应当保留的记录。</li>
+</ul>
+<h2>五、数据处理与保留</h2>
+<p>我们会按照《隐私政策》处理您的个人信息。注销后，除法律法规要求或为处理争议、安全审计、反欺诈等目的必须保留的信息外，我们将删除或匿名化处理您的个人信息。依法保留的信息将仅在法定目的和期限内使用。</p>
+<h2>六、未成年人</h2>
+<p>未成年人申请注销账号，应事先取得其监护人的同意，并按平台要求完成身份与监护关系验证。</p>
+<h2>七、协议更新</h2>
+<p>我们可能根据法律法规或产品变化更新本协议。更新后的协议将在政策中心公布；重大变更会以适当方式提示。更新生效后，您继续使用平台服务即视为接受更新后的协议。</p>
+<h2>八、联系我们</h2>
+<p>如对本协议或账号注销有疑问，可通过平台「反馈与建议」或联系邮箱 contact@sytronichub.com 与我们联系。</p>
+<div class="back-link-group">
+<a href="/zh-hans/">← 返回政策中心</a>
+</div>
 </div>
 </div>
 </main>
 <nav class="lang-switch" style="text-align:center;padding:24px 16px;font-size:13px;line-height:2;"><a href="/zh-hans/account-deletion">简体中文</a> · <a href="/zh-hant/account-deletion">繁體中文</a> · <a href="/en/account-deletion">English</a> · <a href="/ja/account-deletion">日本語</a> · <a href="/ko/account-deletion">한국어</a> · <a href="/fr/account-deletion">Français</a> · <a href="/de/account-deletion">Deutsch</a></nav>
-</body>
+<script>
+(function () {
+  var select = document.getElementById('policyVersion');
+  var note = document.getElementById('policyHistoryNote');
+  var noteVersion = document.getElementById('policyHistoryVersion');
+  var updated = document.getElementById('policyUpdated') || document.querySelector('.last-updated');
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.policy-version'));
+  if (!select || !sections.length) return;
+  var current = sections[0];
+  var currentText = updated ? updated.textContent : '';
+  var currentUpdated = current.getAttribute('data-updated') || '';
+  var prefix = currentText.replace(currentUpdated, '');
+  function apply(date) {
+    var section = sections.filter(function (x) { return x.getAttribute('data-date') === date; })[0] || current;
+    sections.forEach(function (x) { x.hidden = x !== section; });
+    select.value = section.getAttribute('data-date');
+    if (note) note.hidden = section === current;
+    if (noteVersion) noteVersion.textContent = section.getAttribute('data-updated') || '';
+    if (updated) updated.textContent = prefix + (section.getAttribute('data-updated') || '');
+  }
+  select.addEventListener('change', function () { apply(select.value); });
+  if (location.search.indexOf('date=') >= 0) {
+    var date = new URLSearchParams(location.search).get('date');
+    if (date) apply(date);
+  }
+})();
+</script></body>
 </html>

@@ -383,11 +383,17 @@
 .lang-switch a{color:var(--primary,#43A047);text-decoration:none;font-weight:600;white-space:nowrap}
 .lang-switch a:hover{text-decoration:underline;text-underline-offset:3px}
 .lang-switch a[aria-current="page"]{color:var(--on-surface,#191D19);font-weight:800}
+</style><style id="policy-version-style">
+.policy-version-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0 0;font-size:13px;color:var(--on-sv,#414941)}
+.policy-version-bar label{font-weight:700}
+.policy-version-bar select{min-height:36px;border:1px solid var(--outline-v,rgba(0,0,0,.15));border-radius:10px;background:var(--surface-cl,#fff);color:var(--on-surface,#191D19);padding:6px 10px;font:inherit}
+.policy-history-note{margin:10px 0 0;font-size:12px;color:var(--on-sv,#414941);background:var(--surface-ch,#f2f5f2);padding:8px 10px;border-radius:10px}
+.policy-history-note[hidden]{display:none}
 </style></head><body>
 <nav class="nav-bar"><div class="nav-inner"><a class="nav-brand" href="/zh-hans/"><img alt="Sytronic Hub Logo" src="https://static.sytronichub.com/images/solar-logo.png"/><span>Policy Center</span></a></div></nav>
 <main class="main-wrap"><div class="main-inner">
 <h1 class="page-title">Minors' Service Agreement</h1>
-<div class="last-updated">Last updated: 15 November 2026</div>
+<div class="last-updated">Last updated: 15 November 2026</div><div class="policy-version-bar"><label for="policyVersion">Version history</label><select aria-label="Version history" id="policyVersion"><option selected="" value="2026-11-15">15 November 2026 (current)</option><option value="2026-11-12">November 12, 2026</option></select></div><div class="policy-history-note" hidden="" id="policyHistoryNote">Version history: <span id="policyHistoryVersion"></span></div>
 <div class="policy-content policy-version" data-date="2026-11-15" data-updated="15 November 2026">
 <p>This Minors' Service Agreement (the "Agreement") applies to the use of Sytronic Hub services by users under the age of eighteen. Before using the Platform, minors shall read this Agreement together with their guardians and use the Platform with their guardians' knowledge, consent and guidance. If you are under the age of fourteen, you shall also comply with the special provisions of applicable laws and regulations on the protection of children's personal information.</p>
 <p>This Agreement forms part of the User Service Agreement and applies together with the Privacy Policy, the Community Guidelines and the Account Deletion Agreement. The Platform may impose stricter restrictions on certain features, content and interactions as needed for the protection of minors.</p>
@@ -420,7 +426,50 @@
 <p>Where the Platform discovers that a minor has suffered abuse, inducement, fraud, cyberbullying, privacy leakage or other dangerous situations, it may give priority to handling the matter, preserve evidence, restrict the relevant accounts and report to the relevant authorities in accordance with law.</p>
 <h2>8. Updates to This Agreement and Contact</h2>
 <p>We may update this Agreement based on laws and regulations, regulatory requirements or product changes. The updated Agreement will be published in the Policy Center with its effective date indicated; material changes will be notified in an appropriate manner. If you have any questions about this Agreement, you may contact us through "Feedback and Suggestions", the Help Center or <a href="mailto:help@sytronichub.com">help@sytronichub.com</a>.</p>
+</div><div class="policy-content policy-version" data-date="2026-11-12" data-updated="November 12, 2026" hidden="">
+<p>This Minor Service Agreement (the “Agreement”) applies to users under the age of 18 who use Sytronic Hub. Minors must read this Agreement together with their guardian and use the platform only with the guardian’s knowledge, consent and guidance.</p>
+<h2>1. Restricted Content Notice</h2>
+<p>The platform contains user-uploaded restricted content that may be unsuitable for minors to read or view. We label and restrict such content under our rules. Minors must not actively search for, view or share unsuitable content.</p>
+<h2>2. Guardian Awareness and Consent</h2>
+<p>A guardian must be aware when a minor uses the platform. The guardian should understand the purpose, duration and scope of the minor’s use and should guide and supervise it. Minors must obtain guardian consent before registering, linking an account or using community features.</p>
+<h2>3. Usage Guidance</h2>
+<ul><li>Minors should use the platform under guardian guidance and must not make payments, tips or transactions without guardian consent.</li><li>Do not disclose real names, addresses, schools, contact details or other personal information to strangers.</li><li>If you encounter unsuitable content, harassment or inducement, stop using the platform, tell your guardian, and report it through the platform.</li></ul>
+<h2>4. Access to Restricted Content</h2>
+<p>For labeled restricted content, the platform may require age confirmation or other access restrictions. Minors must not bypass age confirmation, access restrictions or guardian controls.</p>
+<h2>5. Personal Information</h2>
+<p>We protect minors’ personal information, collect and use it only as necessary to provide the service, and process it under the Privacy Policy. Guardians may contact us using the details below if they believe a minor’s information has been improperly collected or used.</p>
+<h2>6. Accounts and Content</h2>
+<p>If a minor violates laws, this Agreement or platform rules, we may restrict features, remove content, suspend or terminate the service in accordance with law and the Agreement. Guardians should cooperate with us.</p>
+<h2>7. Updates and Contact</h2>
+<p>We may update this Agreement according to law or product changes; the updated version will be published in the Policy Center. Questions: use the platform’s Feedback or contact contact@sytronichub.com.</p>
+<div class="back-link-group"><a href="/zh-hans/">← Back to Policy Center</a></div>
 </div>
 </div></main>
 <nav class="lang-switch" style="text-align:center;padding:24px 16px;font-size:13px;line-height:2;"><a href="/zh-hans/minor-agreement">简体中文</a> · <a href="/zh-hant/minor-agreement">繁體中文</a> · <a href="/en/minor-agreement">English</a> · <a href="/ja/minor-agreement">日本語</a> · <a href="/ko/minor-agreement">한국어</a> · <a href="/fr/minor-agreement">Français</a> · <a href="/de/minor-agreement">Deutsch</a></nav>
-</body></html>
+<script>
+(function () {
+  var select = document.getElementById('policyVersion');
+  var note = document.getElementById('policyHistoryNote');
+  var noteVersion = document.getElementById('policyHistoryVersion');
+  var updated = document.getElementById('policyUpdated') || document.querySelector('.last-updated');
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.policy-version'));
+  if (!select || !sections.length) return;
+  var current = sections[0];
+  var currentText = updated ? updated.textContent : '';
+  var currentUpdated = current.getAttribute('data-updated') || '';
+  var prefix = currentText.replace(currentUpdated, '');
+  function apply(date) {
+    var section = sections.filter(function (x) { return x.getAttribute('data-date') === date; })[0] || current;
+    sections.forEach(function (x) { x.hidden = x !== section; });
+    select.value = section.getAttribute('data-date');
+    if (note) note.hidden = section === current;
+    if (noteVersion) noteVersion.textContent = section.getAttribute('data-updated') || '';
+    if (updated) updated.textContent = prefix + (section.getAttribute('data-updated') || '');
+  }
+  select.addEventListener('change', function () { apply(select.value); });
+  if (location.search.indexOf('date=') >= 0) {
+    var date = new URLSearchParams(location.search).get('date');
+    if (date) apply(date);
+  }
+})();
+</script></body></html>
