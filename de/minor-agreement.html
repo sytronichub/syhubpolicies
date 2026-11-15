@@ -378,7 +378,12 @@
         .policy-history-note a { color: var(--on-primary-container); text-decoration: underline; }
         .policy-version[hidden], .policy-history-note[hidden] { display: none !important; }
     </style>
-</head><body>
+<style id="policy-lang-style">
+.lang-switch{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 18px;padding:28px 20px 40px;margin-top:36px;border-top:1px solid var(--outline-v,rgba(0,0,0,.08));font-size:13px;line-height:1.8;background:var(--surface-clo,#f8faf8)}
+.lang-switch a{color:var(--primary,#43A047);text-decoration:none;font-weight:600;white-space:nowrap}
+.lang-switch a:hover{text-decoration:underline;text-underline-offset:3px}
+.lang-switch a[aria-current="page"]{color:var(--on-surface,#191D19);font-weight:800}
+</style></head><body>
 <nav aria-label="Führende Navigation" class="nav-bar" role="navigation">
 <div class="nav-inner">
 <a aria-label="StartseiteSytronic Hub" class="nav-brand" href="/zh-hans/">
